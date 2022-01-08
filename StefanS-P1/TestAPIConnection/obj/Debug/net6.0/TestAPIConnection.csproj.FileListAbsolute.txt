@@ -1,0 +1,15 @@
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\bin\Debug\net6.0\TestAPIConnection.exe
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\bin\Debug\net6.0\TestAPIConnection.deps.json
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\bin\Debug\net6.0\TestAPIConnection.runtimeconfig.json
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\bin\Debug\net6.0\TestAPIConnection.dll
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\bin\Debug\net6.0\ref\TestAPIConnection.dll
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\bin\Debug\net6.0\TestAPIConnection.pdb
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\obj\Debug\net6.0\TestAPIConnection.csproj.AssemblyReference.cache
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\obj\Debug\net6.0\TestAPIConnection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\obj\Debug\net6.0\TestAPIConnection.AssemblyInfoInputs.cache
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\obj\Debug\net6.0\TestAPIConnection.AssemblyInfo.cs
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\obj\Debug\net6.0\TestAPIConnection.csproj.CoreCompileInputs.cache
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\obj\Debug\net6.0\TestAPIConnection.dll
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\obj\Debug\net6.0\ref\TestAPIConnection.dll
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\obj\Debug\net6.0\TestAPIConnection.pdb
+C:\Users\schwe\Revature\StefanS-P1\TestAPIConnection\obj\Debug\net6.0\TestAPIConnection.genruntimeconfig.cache
