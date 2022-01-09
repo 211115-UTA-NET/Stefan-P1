@@ -8,7 +8,7 @@ namespace DigitalStore
 {
     public class Login
     {
-        private static int SessionID { get; set; }
+        public static int SessionID { get; set; }
         private int CurrentCustomerID { get; set; }
 
         //Checks for authentification boolean on username

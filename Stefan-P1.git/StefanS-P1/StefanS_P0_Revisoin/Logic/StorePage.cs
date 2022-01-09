@@ -32,7 +32,8 @@ namespace StefanS_P0_Revisoin.Logic
                         break;
                     case 3:
                         checkOrders O = new checkOrders();
-                        O.history(user);
+                        O.GetOrders(user);
+                        //O.history(user);
                         break;
                     case 4:
                         check = true;
