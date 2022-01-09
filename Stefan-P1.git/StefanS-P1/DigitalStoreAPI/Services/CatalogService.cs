@@ -6,7 +6,6 @@ namespace DigitalStoreAPI.Services
     public class CatalogService
     {
         static List<Catalog> Inventory { get; }
-        static int nextId = 19;
         static CatalogService()
         {
             Inventory = new List<Catalog>

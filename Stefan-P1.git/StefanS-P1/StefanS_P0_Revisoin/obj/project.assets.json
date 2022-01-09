@@ -672,11 +672,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\schwe\\Revature\\StefanS-P1\\StefanS_P0_Revisoin\\StefanS_P0_Revisoin.csproj",
+      "projectUniqueName": "C:\\Users\\schwe\\Revature\\Stefan-P1.git\\StefanS-P1\\StefanS_P0_Revisoin\\StefanS_P0_Revisoin.csproj",
       "projectName": "StefanS_P0_Revisoin",
-      "projectPath": "C:\\Users\\schwe\\Revature\\StefanS-P1\\StefanS_P0_Revisoin\\StefanS_P0_Revisoin.csproj",
+      "projectPath": "C:\\Users\\schwe\\Revature\\Stefan-P1.git\\StefanS-P1\\StefanS_P0_Revisoin\\StefanS_P0_Revisoin.csproj",
       "packagesPath": "C:\\Users\\schwe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\schwe\\Revature\\StefanS-P1\\StefanS_P0_Revisoin\\obj\\",
+      "outputPath": "C:\\Users\\schwe\\Revature\\Stefan-P1.git\\StefanS-P1\\StefanS_P0_Revisoin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\schwe\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,75 +1,85 @@
 using System;
-using Dtos;
+using StefanS_P0_Revisoin.Dtos;
 using SQLLogic;
 using StefanS_P0_Revisoin.Logic;
+using StefanS_P0_Revisoin.HttpRequests;
 
 namespace DigitalStore
 {
     public class Login
     {
-        public static int SessionID { get; set; }
+        private static int SessionID { get; set; }
+        private int CurrentCustomerID { get; set; }
 
         //Checks for authentification boolean on username
-        public static void IsAuthenticated(string user, out bool response, out int id)
+        public static async Task<bool> IsAuthenticated(string user, Login checker)
         {
-            //create fields for out
-            response = false;
-            id = 0;
+            bool auth;
+            var CurrentCustomer = await LoginTasks.GetUser(user);
 
-            //initiate check for username and retrieves boolean and id
-            SQLCommands.CheckForUser(user, out bool exists, out int ID);
-            Customer_Dtos C = new();
-
-            if (exists == false)
+            if (CurrentCustomer.FirstOrDefault().Username == null)
             {
-                Console.WriteLine("User Does not Exist");
-                response = false;
+                Console.WriteLine("No User Found");
+                auth = false;
             }
-            else if (exists == true)
-            {
-                Console.WriteLine("User Found");
-                response = true;
-                //updates the customer Dtos
-                C.user = user;
-                C.id = ID;
-                id = C.id;
-                //create the session id
-                var random = new Random();
-                SessionID = random.Next();
-                C.seshId = SessionID;
+            else if (CurrentCustomer.FirstOrDefault().Username == user)
+            {    
+                checker.CurrentCustomerID = CurrentCustomer.FirstOrDefault().CustomerID;
+                auth = true;
             }
             else
             {
-                Console.WriteLine("Error");
+                Console.WriteLine("User Query Error, try again.");
+                auth = false;
+                }
+            
+            return auth;
+        }
+
+        //------------------------------------------
+        public static async Task<bool> PasswordAuthenticator(string pass, Login checker)
+        {
+            bool auth;
+            var CurrentID = await LoginTasks.GetPass(checker.CurrentCustomerID);
+
+            if (CurrentID.FirstOrDefault().Password == pass)
+            {
+                auth = true;
             }
+            else
+            {
+                Console.WriteLine("Password does not match");
+                auth = false;
+            }
+            return auth;
         }
 
         //---------------------------------------------------
-        public static void UserEntry()
+        public static async Task UserEntry()
         {
+            Login checker = new();
             //information retriever for username, check username, then retrieves id and check status
             Console.WriteLine("Enter Username: ");
-            string user = Console.ReadLine();
-            IsAuthenticated(user,out bool exists, out int id);
+            string? user = Console.ReadLine();
 
-            //checks statsus of authenticator and sets password check to false as default
-            bool check = exists;
-            bool check2 = false;
 
-            if(check == true)
+            bool validationCheck = await IsAuthenticated(user,checker);
+            bool passwordCheck = false;
+
+            if(validationCheck == true)
             {
                 Console.WriteLine("Enter Password: ");
                 string password = Console.ReadLine();
 
-                check2 = SQLCommands.CheckPassword(password, id);
+                passwordCheck = await PasswordAuthenticator(password, checker);
             }
-            else if (check == false)
+            else if (validationCheck == false)
             {
-                Console.WriteLine("Check Failed");
+                Console.WriteLine("User Not Found");
             }
 
             //final check for user access
-            if(check2 == true)
+            if(passwordCheck == true)
             {
                 Console.WriteLine("Login Sucessful");
                 Store S = new();

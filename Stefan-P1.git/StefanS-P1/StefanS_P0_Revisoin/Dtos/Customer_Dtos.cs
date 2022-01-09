@@ -1,9 +1,43 @@
-namespace Dtos
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.Json.Serialization;
+
+namespace StefanS_P0_Revisoin.Dtos
 {
     public class Customer_Dtos
     {
-        public int id { get; set; }
-        public string? user { get; set; }
-        public int seshId { get; set; }
+        [JsonPropertyName("id")]
+        public int CustomerID { get; set; }
+
+        [JsonPropertyName("username")]
+        public string? Username { get; set; }
+    }
+
+    public class NewCustomer_Dtos
+    {
+        [JsonPropertyName("id")]
+        public int CustomerID { get; set; }
+
+        [JsonPropertyName("username")]
+        public string? Username { get; set; }
+
+        [JsonPropertyName("firstname")]
+        public int FirstName { get; set; }
+
+        [JsonPropertyName("lastname")]
+        public string? LastName { get; set; }
+
+    }
+
+    public class Password_Dtos
+    {
+        [JsonPropertyName("id")]
+        public int CustomerID { get; set; }
+
+        [JsonPropertyName("password")]
+        public string? Password { get; set; }
     }
 }

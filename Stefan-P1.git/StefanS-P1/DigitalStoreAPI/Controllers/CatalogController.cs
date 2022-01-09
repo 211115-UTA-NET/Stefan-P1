@@ -31,9 +31,7 @@ public class CatalogController : ControllerBase
     {
         string connect = _configuration.GetSection("ConnectionString").GetSection("PrintShopDB").Value;
         using SqlConnection connection = new(connect);
-        var catalog = CatalogService.Get(id,connection);
-
-        return catalog;
+        return CatalogService.Get(id,connection);
     }
 
 
