@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Diagnostics.CodeAnalysis;
 using System.Data.SqlClient;
-using DigitalStoreAPI.Controllers;
 
 namespace DigitalStoreAPI.Models
 {

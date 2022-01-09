@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Net.Http.Headers;
 using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
+using StefanS_P0_Revisoin.Dtos;
+
 
 namespace StefanS_P0_Revisoin.HttpRequests
 {
@@ -10,16 +10,26 @@ namespace StefanS_P0_Revisoin.HttpRequests
     {
         private static readonly HttpClient client = new HttpClient();
 
-        public static async Task<List<Customer_Dtos>> GetUser(string username)
+        public static async void CreateUser(string username, string first, string last, string pass)
         {
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-            //client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
+            NewCustomer_Dtos U = new();
+            U.Username = username;
+            U.FirstName = first;
+            U.LastName = last;
+            U.Password = pass;
 
-            var streamTask = client.GetStreamAsync($"https://localhost:7298/api/Customers/{username}?user={username}");
-            var customers = await JsonSerializer.DeserializeAsync<List<Customer_Dtos>>(await streamTask);
-            return customers;
+            string jsonString = JsonConvert.SerializeObject(U);
+
+            var data = new StringContent(jsonString, Encoding.UTF8, "application/json");
+
+            var url = "https://localhost:7298/api/NewUser";
+
+            var response = await client.PostAsync(url, data);
+
+            string result = response.Content.ReadAsStringAsync().Result;
+
+            Console.WriteLine(result);
+            
         }
     }
 }

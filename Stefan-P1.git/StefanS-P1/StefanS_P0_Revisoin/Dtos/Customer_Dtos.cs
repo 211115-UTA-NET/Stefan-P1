@@ -18,17 +18,18 @@ namespace StefanS_P0_Revisoin.Dtos
 
     public class NewCustomer_Dtos
     {
-        [JsonPropertyName("id")]
-        public int CustomerID { get; set; }
-
         [JsonPropertyName("username")]
         public string? Username { get; set; }
 
         [JsonPropertyName("firstname")]
-        public int FirstName { get; set; }
+        public string? FirstName { get; set; }
 
         [JsonPropertyName("lastname")]
         public string? LastName { get; set; }
+
+        [JsonPropertyName("password")]
+        public string? Password { get; set; }
+
 
     }
 

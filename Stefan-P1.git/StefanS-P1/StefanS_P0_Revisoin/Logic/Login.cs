@@ -16,6 +16,8 @@ namespace DigitalStore
         {
             bool auth;
             var CurrentCustomer = await LoginTasks.GetUser(user);
+            Console.WriteLine(CurrentCustomer.First().Username);
+
 
             if (CurrentCustomer.FirstOrDefault().Username == null)
             {

@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
-using System.Collections.Generic;
+﻿using System.Net.Http.Headers;
 using System.Text.Json;
 using StefanS_P0_Revisoin.Dtos;
 
@@ -23,7 +15,7 @@ namespace StefanS_P0_Revisoin.HttpRequests
                 new MediaTypeWithQualityHeaderValue("application/json"));
             //client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
-            var streamTask = client.GetStreamAsync($"https://localhost:7298/api/Customers/{username}?user={username}");
+            var streamTask = client.GetStreamAsync($"https://localhost:7298/api/Customers/username?user={username}");
             var customers = await JsonSerializer.DeserializeAsync<List<Customer_Dtos>>(await streamTask);
             return customers;
         }
@@ -35,7 +27,7 @@ namespace StefanS_P0_Revisoin.HttpRequests
                 new MediaTypeWithQualityHeaderValue("application/json"));
             //client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
-            var streamTask = client.GetStreamAsync($"https://localhost:7298/api/Password/{id}?={id}");
+            var streamTask = client.GetStreamAsync($"https://localhost:7298/api/Password/password?id={id}");
             var password = await JsonSerializer.DeserializeAsync<List<Password_Dtos>>(await streamTask);
             return password;
         }

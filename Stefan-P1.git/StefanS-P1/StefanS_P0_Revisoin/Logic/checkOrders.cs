@@ -11,7 +11,7 @@ namespace StefanS_P0_Revisoin.Logic
     {
         public void history(string user)
         {
-            string connect = File.ReadAllText("C:/Users/schwe/Revature/StefanS-P0/connect.txt");
+            string connect = File.ReadAllText("C:/Users/schwe/Revature/Stefan-P1.git/StefanS-P1/StefanS_P0_Revisoin/connection.txt");
             SqlConnection connection = new(@connect);
 
             string userData = $"SELECT * FROM ExistingCustomers WHERE Username = '{user}'";

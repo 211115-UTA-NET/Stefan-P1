@@ -45,3 +45,4 @@ C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Debug\n
 C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\obj\Debug\net6.0\StefanS_P0_Revisoin.csproj.CopyComplete
 C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\obj\Debug\net6.0\StefanS_P0_Revisoin.genruntimeconfig.cache
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Debug\net6.0\Newtonsoft.Json.dll
