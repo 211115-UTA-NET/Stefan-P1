@@ -16,6 +16,8 @@ namespace StefanS_P0_Revisoin.HttpRequests
             //client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
             var streamTask = client.GetStreamAsync($"https://localhost:7298/api/Customers/username?user={username}");
+            //var streamTask = client.GetStreamAsync($"dockerstoreapi.eastus.azurecontainer.io/api/Customers/username?user={username}");
+            //var streamTask = client.GetStreamAsync($"http://localhost:8080/api/Customers/username?user={username}");
             var customers = await JsonSerializer.DeserializeAsync<List<Customer_Dtos>>(await streamTask);
             return customers;
         }
@@ -28,6 +30,8 @@ namespace StefanS_P0_Revisoin.HttpRequests
             //client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
             var streamTask = client.GetStreamAsync($"https://localhost:7298/api/Password/password?id={id}");
+            //var streamTask = client.GetStreamAsync($"dockerstoreapi.eastus.azurecontainer.io/api/Password/password?id={id}");
+            //var streamTask = client.GetStreamAsync($"http://localhost:8080/api/Password/password?id={id}");
             var password = await JsonSerializer.DeserializeAsync<List<Password_Dtos>>(await streamTask);
             return password;
         }

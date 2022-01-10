@@ -21,6 +21,7 @@ namespace StefanS_P0_Revisoin.HttpRequests
             //client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
             var streamTask = client.GetStreamAsync($"https://localhost:7298/api/Catalog");
+            //var streamTask = client.GetStreamAsync($"dockerstoreapi.eastus.azurecontainer.io/api/Catalog");
             var inventory = await JsonSerializer.DeserializeAsync<List<Inventory_Dtos>>(await streamTask);
             return inventory;
         }

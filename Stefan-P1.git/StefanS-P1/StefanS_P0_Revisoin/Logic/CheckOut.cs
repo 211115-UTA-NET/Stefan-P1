@@ -52,6 +52,7 @@ namespace StefanS_P0_Revisoin.Logic
                 CheckoutTask.AddToCart(checkoutCart);
                 Console.WriteLine("Purchase Complete");
                 Store.cart.Clear();
+                Store.stock.Clear();
             }
                 
             

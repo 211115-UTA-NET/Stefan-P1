@@ -3,8 +3,11 @@
     "",
     "\\DigitalStoreAPI",
     "\\DigitalStoreAPI\\Controllers",
+    "\\StefanS_P0_Revisoin",
+    "\\StefanS_P0_Revisoin\\HttpRequests",
+    "\\StefanS_P0_Revisoin\\Logic",
     "\\TestAPIConnection"
   ],
-  "SelectedNode": "\\DigitalStoreAPI\\Controllers\\CheckoutController.cs",
+  "SelectedNode": "\\DigitalStoreAPI\\Controllers\\OrdersController.cs",
   "PreviewInSolutionExplorer": false
 }

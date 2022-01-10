@@ -19,9 +19,8 @@ namespace StefanS_P0_Revisoin
             //Console.WriteLine(CurrentCustomer.First().Username); //prints out selected user
 
 
-            if (CurrentCustomer.FirstOrDefault().Username == null)
+            if (CurrentCustomer.Count() == 0)
             {
-                Console.WriteLine("No User Found");
                 auth = false;
             }
             else if (CurrentCustomer.FirstOrDefault().Username == user)
@@ -91,7 +90,7 @@ namespace StefanS_P0_Revisoin
                 //brings us into the application
                 Console.WriteLine("Login Sucessful");
 
-                await StorePage.Access(checker.CustomerName,SessionID,checker.CurrentCustomerID);
+                await StorePage.Access(user,checker.CustomerName,SessionID,checker.CurrentCustomerID);
             }
         }
     }

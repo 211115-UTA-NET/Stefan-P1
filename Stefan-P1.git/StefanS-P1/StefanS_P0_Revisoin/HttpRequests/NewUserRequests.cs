@@ -23,6 +23,7 @@ namespace StefanS_P0_Revisoin.HttpRequests
 
             var data = new StringContent(jsonString, Encoding.UTF8, "application/json");
 
+            //var url = "dockerstoreapi.eastus.azurecontainer.io/api/NewUser";
             var url = "https://localhost:7298/api/NewUser";
 
             var response = await client.PostAsync(url, data);

@@ -1,0 +1,15 @@
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\StefanS_P0_Revisoin.exe
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\StefanS_P0_Revisoin.dll
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\StefanS_P0_Revisoin.deps.json
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\StefanS_P0_Revisoin.runtimeconfig.json
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\StefanS_P0_Revisoin.pdb
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\Microsoft.Extensions.Primitives.dll
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\Microsoft.Net.Http.Headers.dll
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\Newtonsoft.Json.dll
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\System.Data.SqlClient.dll
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\runtimes\win-arm64\native\sni.dll
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\runtimes\win-x64\native\sni.dll
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\runtimes\win-x86\native\sni.dll
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\schwe\Revature\Stefan-P1.git\StefanS-P1\StefanS_P0_Revisoin\bin\Release\net6.0\publish\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

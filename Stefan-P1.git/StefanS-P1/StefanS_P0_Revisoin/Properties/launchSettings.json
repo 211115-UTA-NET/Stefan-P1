@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "StefanS_P0_Revisoin": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

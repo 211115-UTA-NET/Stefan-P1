@@ -11,7 +11,7 @@ namespace StefanS_P0_Revisoin.Logic
 {
     public class Store : StorePage
     {
-        static List<Inventory_Dtos>? stock { get; set; }
+        public static List<Inventory_Dtos> stock { get; set; }
         public static List<ShoppingCart_Dtos> cart { get; set; }
         static Store()
         {

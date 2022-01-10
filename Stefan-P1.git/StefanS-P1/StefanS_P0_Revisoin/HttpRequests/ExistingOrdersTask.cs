@@ -24,6 +24,7 @@ namespace StefanS_P0_Revisoin.HttpRequests
 
 
             var streamTask = client.GetStreamAsync($"https://localhost:7298/api/Orders?user={username}");
+            //var streamTask = client.GetStreamAsync($"dockerstoreapi.eastus.azurecontainer.io/api/Orders?user={username}");
             var orders = await JsonSerializer.DeserializeAsync<List<ExistingOrders_Dtos>>(await streamTask);
             return orders;
         }

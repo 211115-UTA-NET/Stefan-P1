@@ -13,11 +13,19 @@ namespace StefanS_P0_Revisoin.Logic
     {
         public static void ShowCart()
         {
-            foreach(var x in Store.cart)
+            if (Store.cart.Count == 0)
             {
-                Console.WriteLine(string.Format("\t{0,10}|{1,8:N2}|{2,3}|{3,10}",$"{ x.item }",$"${ x.price}",$"{ x.quantity}",$"{ x.location}"));
-
+                Console.WriteLine("Cart is Empty");
             }
+            else
+            {
+                foreach(var x in Store.cart)
+                {
+                    Console.WriteLine(string.Format("\t{0,10}|{1,8:N2}|{2,3}|{3,10}",$"{ x.item }",$"${ x.price}",$"{ x.quantity}",$"{ x.location}"));
+
+                }
+            }
+            Console.WriteLine();
         }
     }
 }
