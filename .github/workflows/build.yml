@@ -43,6 +43,6 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"211115-UTA-NET_Stefan-P1" /o:"211115-uta-net" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build ./Stefan-P1.git/Stefan-P1/Stefan-P1.git/StefanS-P1/StefanS_P0_Revisoin/StefanS_P0_Revisoin.sln
-          dotnet build ./Stefan-P1.git/Stefan-P1/Stefan-P1.git/StefanS-P1/DigitalStoreAPI/DigitalStoreAPI.sln
+          dotnet build ./Stefan-P1.git/StefanS-P1/StefanS_P0_Revisoin/StefanS_P0_Revisoin.sln
+          dotnet build ./Stefan-P1.git/StefanS-P1/DigitalStoreAPI/DigitalStoreAPI.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
