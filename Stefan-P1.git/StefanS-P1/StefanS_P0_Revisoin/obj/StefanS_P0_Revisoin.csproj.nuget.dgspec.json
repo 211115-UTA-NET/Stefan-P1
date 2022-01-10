@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\schwe\\Revature\\Stefan-P1.git\\StefanS-P1\\StefanS_P0_Revisoin\\StefanS_P0_Revisoin.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\schwe\\Revature\\Stefan-P1.git\\StefanS-P1\\StefanS_P0_Revisoin\\StefanS_P0_Revisoin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\schwe\\Revature\\Stefan-P1.git\\StefanS-P1\\StefanS_P0_Revisoin\\StefanS_P0_Revisoin.csproj",
+        "projectName": "StefanS_P0_Revisoin",
+        "projectPath": "C:\\Users\\schwe\\Revature\\Stefan-P1.git\\StefanS-P1\\StefanS_P0_Revisoin\\StefanS_P0_Revisoin.csproj",
+        "packagesPath": "C:\\Users\\schwe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\schwe\\Revature\\Stefan-P1.git\\StefanS-P1\\StefanS_P0_Revisoin\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\schwe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.WebUtilities": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
