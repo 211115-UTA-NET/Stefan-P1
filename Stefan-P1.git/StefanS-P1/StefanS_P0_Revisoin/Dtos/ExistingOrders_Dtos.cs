@@ -9,6 +9,9 @@ namespace StefanS_P0_Revisoin.Dtos
 {
     public class ExistingOrders_Dtos
     {
+        [JsonPropertyName("item_id")]
+        public int item_id { get; set; }
+
         [JsonPropertyName("customer_id")]
         public int customer_id { get; set; }
         [JsonPropertyName("first_name")]

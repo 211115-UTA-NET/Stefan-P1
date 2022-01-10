@@ -18,6 +18,8 @@ namespace DigitalStoreAPI.Models
         //get specific
         public static List<Password> Get(int id, SqlConnection connection)
         {
+            List<Password> pass = new();
+
             string sql = $"SELECT * FROM CustomerPasswords WHERE CustomerID = {id}";
 
             connection.Open();

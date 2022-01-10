@@ -17,6 +17,8 @@ namespace DigitalStoreAPI.Services
         //get all
         public static List<Catalog> GetAll(SqlConnection connection)
         {
+            List<Catalog> Inventory = new();
+
             string sql = "SELECT * FROM _Catalog";
 
             connection.Open();
@@ -41,6 +43,8 @@ namespace DigitalStoreAPI.Services
         //get specific
         public static List<Catalog> Get(int id, SqlConnection connection)
         {
+            List<Catalog> Inventory = new();
+
 
             string sql = $"SELECT * FROM _Catalog WHERE ItemID = {id}";
 

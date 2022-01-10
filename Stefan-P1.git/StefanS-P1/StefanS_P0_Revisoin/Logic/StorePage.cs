@@ -9,7 +9,7 @@ namespace StefanS_P0_Revisoin.Logic
     public class StorePage
     {
        
-        public static async Task Access(string user, int orderID)
+        public static async Task Access(string user, int orderID, int customerID)
         {
             bool check = false;
 
@@ -25,7 +25,7 @@ namespace StefanS_P0_Revisoin.Logic
                 switch (input)
                 {
                     case 1:
-                        await Store.Shop(user, orderID);
+                        await Store.Shop(orderID);
                         break;
                     case 2:
                         DisplayCart.ShowCart();
@@ -35,7 +35,7 @@ namespace StefanS_P0_Revisoin.Logic
                         await O.GetOrders(user);
                         break;
                     case 4:
-                        //Checkout;
+                        CheckOut.buy(user, customerID, orderID);
                         break;
                     case 5:
                         check = true;

@@ -2,6 +2,7 @@
 {
     public class ExistingOrders
     {
+        public int item_id { get; set; }
         public int customer_id { get; set; }
         public string? first_name { get; set; }
         public int order_id { get; set; }

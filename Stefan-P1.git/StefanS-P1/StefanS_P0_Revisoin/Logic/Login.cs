@@ -9,6 +9,7 @@ namespace StefanS_P0_Revisoin
     public class Login
     {
         private int CurrentCustomerID { get; set; }
+        private string? CustomerName { get; set; }
 
         //Checks for authentification boolean on username
         public static async Task<bool> IsAuthenticated(string user, Login checker)
@@ -26,6 +27,7 @@ namespace StefanS_P0_Revisoin
             else if (CurrentCustomer.FirstOrDefault().Username == user)
             {    
                 checker.CurrentCustomerID = CurrentCustomer.FirstOrDefault().CustomerID;
+                checker.CustomerName = CurrentCustomer.FirstOrDefault().firstname;
                 auth = true;
             }
             else
@@ -89,7 +91,7 @@ namespace StefanS_P0_Revisoin
                 //brings us into the application
                 Console.WriteLine("Login Sucessful");
 
-                await StorePage.Access(user,SessionID);
+                await StorePage.Access(checker.CustomerName,SessionID,checker.CurrentCustomerID);
             }
         }
     }

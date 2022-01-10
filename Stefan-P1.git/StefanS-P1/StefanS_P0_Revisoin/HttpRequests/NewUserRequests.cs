@@ -12,6 +12,7 @@ namespace StefanS_P0_Revisoin.HttpRequests
 
         public static async void CreateUser(string username, string first, string last, string pass)
         {
+
             NewCustomer_Dtos U = new();
             U.Username = username;
             U.FirstName = first;

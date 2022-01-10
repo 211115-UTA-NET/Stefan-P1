@@ -14,12 +14,16 @@ namespace StefanS_P0_Revisoin.HttpRequests
     {
         public static async Task<List<ExistingOrders_Dtos>> GetOrders(string username)
         {
+
+            HttpClient client = new HttpClient();
+
             Program.Client().DefaultRequestHeaders.Accept.Clear();
             Program.Client().DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
             //client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
-            var streamTask = Program.Client().GetStreamAsync($"https://localhost:7298/api/Orders?user={username}");
+
+            var streamTask = client.GetStreamAsync($"https://localhost:7298/api/Orders?user={username}");
             var orders = await JsonSerializer.DeserializeAsync<List<ExistingOrders_Dtos>>(await streamTask);
             return orders;
         }

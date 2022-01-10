@@ -20,7 +20,7 @@ namespace StefanS_P0_Revisoin.Logic
         }
 
 
-        public static async Task Shop(string user, int orderID)
+        public static async Task Shop(int orderID)
         {
             bool check = false;
             string located = null;

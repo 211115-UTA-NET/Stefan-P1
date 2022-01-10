@@ -14,6 +14,8 @@ namespace StefanS_P0_Revisoin.Dtos
 
         [JsonPropertyName("username")]
         public string? Username { get; set; }
+        [JsonPropertyName("firstname")]
+        public string? firstname { get; set; }
     }
 
     public class NewCustomer_Dtos

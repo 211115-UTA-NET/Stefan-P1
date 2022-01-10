@@ -18,14 +18,21 @@ namespace DigitalStoreAPI.Models
         //Post to DB
         public static void BuyStuff(List<ExistingOrders> order, SqlConnection connection)
         {
-            connection.Open();
+
             foreach (var I in order)
             {
-                string uploadData = $"INSERT OrderedItems (CustomerID,FirstName,OrderID,StoreLocation,ItemName,Quantity,Price,_TimeDate) VALUES ({I.customer_id},'{I.first_name}',{I.order_id},'{I.location}','{I.item_name}',{I.quantity},{I.price},{I.date})";
-                SqlCommand sql = new(uploadData, connection);
-                sql.ExecuteNonQuery();
+                string uploadData = $"INSERT OrderedItems (CustomerID,FirstName,OrderID,StoreLocation,ItemName,Quantity,Price,_TimeDate) VALUES ({I.customer_id},'{I.first_name}',{I.order_id},'{I.location}','{I.item_name}',{I.quantity},{I.price},GETDATE())";
+                string updateCatalog = $"UPDATE _Catalog SET Quantity = Quantity - {I.quantity} WHERE ItemID = {I.item_id}";
+
+                connection.Open();
+                SqlCommand sql1 = new(uploadData, connection);
+                SqlCommand sql2 = new(updateCatalog, connection);
+
+                sql1.ExecuteNonQuery();
+                sql2.ExecuteNonQuery();
+                connection.Close();
             }
-            connection.Close();
+            
         }
     }
 }

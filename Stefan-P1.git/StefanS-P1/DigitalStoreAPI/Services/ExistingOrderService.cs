@@ -19,6 +19,8 @@ namespace DigitalStoreAPI.Services
         }
         public static List<ExistingOrders> Get(string user, SqlConnection connection)
         {
+            List<ExistingOrders> customerHistory = new();
+
             string sql1 = $"SELECT * FROM ExistingCustomers WHERE Username = '{user}'";
 
             connection.Open();

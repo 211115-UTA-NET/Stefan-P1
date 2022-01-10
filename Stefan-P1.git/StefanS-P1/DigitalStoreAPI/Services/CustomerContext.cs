@@ -19,6 +19,8 @@ namespace DigitalStoreAPI.Models
         //get all
         public static List<Customer> GetAll(SqlConnection connection)
         {
+            List<Customer> customers = new();
+
             string sql = "SELECT * FROM ExistingCustomers";
 
             connection.Open();
@@ -40,6 +42,8 @@ namespace DigitalStoreAPI.Models
         //get specific
         public static List<Customer> Get(string user, SqlConnection connection)
         {
+            List<Customer> customers = new();
+
             string sql = $"SELECT * FROM ExistingCustomers WHERE Username = '{user}'";
 
             connection.Open();
@@ -51,6 +55,7 @@ namespace DigitalStoreAPI.Models
                 {
                     username = reader[0].ToString(),
                     id = (int)reader[1],
+                    firstname = reader[2].ToString(), 
                 };
                 customers.Add(catalog);
             }

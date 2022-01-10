@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\DigitalStoreAPI",
-    "\\StefanS_P0_Revisoin\\Logic"
+    "\\DigitalStoreAPI\\Controllers",
+    "\\TestAPIConnection"
   ],
-  "SelectedNode": "\\DigitalStoreAPI\\DigitalStoreAPI.sln",
+  "SelectedNode": "\\DigitalStoreAPI\\Controllers\\CheckoutController.cs",
   "PreviewInSolutionExplorer": false
 }
