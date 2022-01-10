@@ -1,32 +1,27 @@
-﻿using DigitalStoreAPI.Models;
-using DigitalStoreAPI.Services;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using DigitalStoreAPI.Models;
 using System.Data.SqlClient;
 
 namespace DigitalStoreAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    
-    public class ShoppingCartController : ControllerBase
+    public class CheckoutController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        public ShoppingCartController(IConfiguration configuration)
+        public CheckoutController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
 
-        //Post to shopping cart
+
+        //Getting a specific customer from the database
         [HttpPost]
-        public async void AddToCart(ShoppingCart cart)
+        public async void BuyStuff(List<ExistingOrders> cart)
         {
             string connect = _configuration.GetSection("ConnectionString").GetSection("PrintShopDB").Value;
             await using SqlConnection connection = new(connect);
-            ShoppingCartContext.AddToCart(cart, connection);
+            CheckoutService.BuyStuff(cart, connection);
         }
-
     }
 }
-
-
-

@@ -9,14 +9,14 @@ namespace DigitalStoreAPI.Models
     public class ShoppingCartContext
     {
         //instructions for http data transfer
-        public static void AddToCart(int id, int quantity, int orderID, SqlConnection connection)
+        public static void AddToCart(ShoppingCart cart, SqlConnection connection)
         {
-            string sql = $"INSERT INTO ShoppingCart (OrderID,ItemID,ItemName,Price,Quantity) VALUES (ItemID,ItemName,Price,{quantity}) FROM _Catalog WHERE ItemID = {id}";
+            string sql = $"INSERT INTO ShoppingCart (OrderID,ItemID,ItemName,Price,Quantity,Location) VALUES ({cart.OrderID},{cart.ItemID},'{cart.ItemName}',{cart.Price},{cart.Quantity},'{cart.Location}')";
 
             connection.Open();
             using SqlCommand command = new SqlCommand(sql, connection);
+            command.ExecuteNonQuery();
             connection.Close();
-
 
         }
     }

@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\StefanS_P0_Revisoin\\Logic",
-    "\\TestAPIConnection"
+    "\\DigitalStoreAPI",
+    "\\StefanS_P0_Revisoin\\Logic"
   ],
-  "SelectedNode": "\\TestAPIConnection\\Program.cs",
+  "SelectedNode": "\\DigitalStoreAPI\\DigitalStoreAPI.sln",
   "PreviewInSolutionExplorer": false
 }

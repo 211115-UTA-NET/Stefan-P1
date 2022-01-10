@@ -1,9 +1,9 @@
 using System;
-using Dtos;
+using StefanS_P0_Revisoin.Dtos;
 using SQLLogic;
 using StefanS_P0_Revisoin.HttpRequests;
 
-namespace DigitalStore
+namespace StefanS_P0_Revisoin
 {
     public class NewUser
     {

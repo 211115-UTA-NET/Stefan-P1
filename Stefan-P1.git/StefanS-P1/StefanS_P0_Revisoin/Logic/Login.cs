@@ -4,11 +4,10 @@ using SQLLogic;
 using StefanS_P0_Revisoin.Logic;
 using StefanS_P0_Revisoin.HttpRequests;
 
-namespace DigitalStore
+namespace StefanS_P0_Revisoin
 {
     public class Login
     {
-        public static int SessionID { get; set; }
         private int CurrentCustomerID { get; set; }
 
         //Checks for authentification boolean on username
@@ -16,7 +15,7 @@ namespace DigitalStore
         {
             bool auth;
             var CurrentCustomer = await LoginTasks.GetUser(user);
-            Console.WriteLine(CurrentCustomer.First().Username);
+            //Console.WriteLine(CurrentCustomer.First().Username); //prints out selected user
 
 
             if (CurrentCustomer.FirstOrDefault().Username == null)
@@ -83,9 +82,14 @@ namespace DigitalStore
             //final check for user access
             if(passwordCheck == true)
             {
+                //creates random number for session id
+                var rand = new Random();
+                int SessionID = rand.Next();
+
+                //brings us into the application
                 Console.WriteLine("Login Sucessful");
-                Store S = new();
-                S.Access(user,SessionID);
+
+                await StorePage.Access(user,SessionID);
             }
         }
     }

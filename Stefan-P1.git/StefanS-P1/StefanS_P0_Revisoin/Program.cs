@@ -5,11 +5,16 @@ using System.Net.Http.Json;
 using System.Text.Json;
 
 
-namespace DigitalStore
+namespace StefanS_P0_Revisoin
 {
     public class Program
-    { 
-        public static readonly HttpClient HttpClient = new();
+    {
+        public static HttpClient Client()
+        {
+            HttpClient client = new();
+            return client;
+        }
+
         public static bool leave = false;
         public static async Task Main(string[] args)
         {
