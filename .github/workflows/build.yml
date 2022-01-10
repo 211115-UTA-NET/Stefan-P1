@@ -46,3 +46,4 @@ jobs:
           dotnet build ./Stefan-P1.git/Stefan-P1/Stefan-P1.git/StefanS-P1/StefanS_P0_Revisoin/StefanS_P0_Revisoin.sln
           dotnet build ./Stefan-P1.git/Stefan-P1/Stefan-P1.git/StefanS-P1/DigitalStoreAPI/DigitalStoreAPI.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+       
